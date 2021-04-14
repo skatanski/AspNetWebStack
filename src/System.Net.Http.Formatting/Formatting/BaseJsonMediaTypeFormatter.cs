@@ -430,7 +430,7 @@ namespace System.Net.Http.Formatting
                 jsonWriter.CloseOutput = false;
 
                 JsonSerializer jsonSerializer = CreateJsonSerializerInternal();
-                jsonSerializer.Serialize(jsonWriter, value);
+                jsonSerializer.Serialize(jsonWriter, value, type);
                 jsonWriter.Flush();
             }
         }
